@@ -16,6 +16,29 @@ This project includes:
 - Variable immunity modeled with probability distributions
 - Scenario experimentation and epidemic analysis
 
+### Installation Steps
+1. **Create and activate a virtual environment:**
+```bash
+# create the environment
+python3 -m venv venv
+```
+2. **Activate the environment**
+```bash
+source venv/bin/activate # macOS/Linux  
+venv\\Scripts\\activate # Windows
+```
+3. **Install requirements.txt**
+```bash
+pip install -r requirements.txt
+```
+
+4. **Run the program**
+```bash
+python3 main.py
+```
+
+
+
 ### 85 / 15 Rule
 Following the instructions laid out here is 85% of the assignment. You must add something significant to the project. In other words, if you did everything in these instructions perfectly but nothing else, the highest grade you can receive for the project is 85%.
 
