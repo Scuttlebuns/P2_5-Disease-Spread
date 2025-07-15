@@ -1,10 +1,10 @@
 import tkinter as tk
 from tkinter import ttk, messagebox, filedialog, Toplevel
 import pygame
-from controls import create_controls
-from simulation_canvas import SimulationCanvas
-from graph import SIRGraph
-from simulation_engine import SIRSimulation
+from source.controls import create_controls
+from source.simulation_canvas import SimulationCanvas
+from source.graph import SIRGraph
+from source.simulation_engine import SIRSimulation
 
 class App:
     def __init__(self):
