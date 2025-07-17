@@ -59,8 +59,7 @@ class Simulation:
         self.distancing_active = False
 
         # sample non-compliance fraction from N(mean, sigma)
-        nc = random.gauss(self.nc_mean, self.nc_sigma)
-        nc = max(0.0, min(1.0, nc))
+        nc = max(0.0, min(1.0, random.gauss(self.nc_mean, self.nc_sigma)))
 
         all_cells = [(x, y) for x in range(GRID_SIZE) for y in range(GRID_SIZE)]
         n_agents = int(len(all_cells) * self.density)
@@ -106,29 +105,17 @@ class Simulation:
 
             moves = list(self._neighbors(ag.x, ag.y))
             random.shuffle(moves)
-            moved = False
 
             for nx, ny in moves:
                 if (nx, ny) in occ:
                     continue
                 if self.distancing_active and ag.compliance:
-                    # ensure no neighbors at new spot
                     if any((mx, my) in occ for mx, my in self._neighbors(nx, ny)):
                         continue
-
                 del occ[(ag.x, ag.y)]
                 ag.x, ag.y = nx, ny
                 occ[(nx, ny)] = ag
-                moved = True
                 break
-
-            if not moved:
-                for nx, ny in moves:
-                    if (nx, ny) not in occ:
-                        del occ[(ag.x, ag.y)]
-                        ag.x, ag.y = nx, ny
-                        occ[(nx, ny)] = ag
-                        break
 
         # 2) infection
         for ag in self.agents:
@@ -152,10 +139,7 @@ class Simulation:
             if ag.state == "I":
                 ag.timer += 1
                 if ag.timer >= ag.recovery_duration:
-                    if random.random() < self.mort_rate:
-                        ag.state = "D"
-                    else:
-                        ag.state = "R"
+                    ag.state = "D" if random.random() < self.mort_rate else "R"
 
     def counts(self):
         """Return counts of S, I, R, D agents."""
