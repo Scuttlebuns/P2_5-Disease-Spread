@@ -1,4 +1,3 @@
-# simulation.py
 import random
 
 # Constants
