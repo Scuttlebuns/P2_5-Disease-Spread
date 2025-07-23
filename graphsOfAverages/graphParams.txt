@@ -1,0 +1,125 @@
+==================================
+Balanced Spread -- CDC Intervention
+==================================
+Parameters
+----------------------------------
+Density %: 60
+Initial Infected %: 2
+Infection Probability %: 50
+Recovery Time (Mean): 10
+Mortality %: 2
+CDC Threshold Infected %: 20
+Non-Compliance %: 15
+
+Milestones
+----------------------------------
+Average Outbreak Duration: 
+Peak Infected %: 
+Average Peak Infected %: 
+Peak Dead %: 
+Average Peak Dead %:
+
+==================================
+Balanced Spread -- No CDC Intervention
+==================================
+Parameters
+----------------------------------
+Density %: 60
+Initial Infected %: 2
+Infection Probability %: 50
+Recovery Time (Mean): 10
+Mortality %: 2
+CDC Threshold Infected %: 100
+Non-Compliance %: 100
+
+Milestones
+----------------------------------
+Average Outbreak Duration: 
+Peak Infected %: 
+Average Peak Infected %: 
+Peak Dead %: 
+Average Peak Dead %:
+
+==================================
+Rapid Outbreak -- CDC Intervention
+==================================
+Parameters
+----------------------------------
+Density %: 80
+Initial Infected %: 3
+Infection Probability %: 90
+Recovery Time (Mean): 12
+Mortality %: 1
+CDC Threshold Infected %: 60
+Non-Compliance %: 80
+
+Milestones
+----------------------------------
+Average Outbreak Duration: 
+Peak Infected %: 
+Average Peak Infected %: 
+Peak Dead %: 
+Average Peak Dead %:
+
+==================================
+Rapid Outbreak -- No CDC Intervention
+==================================
+Parameters
+----------------------------------
+Density %: 80
+Initial Infected %: 3
+Infection Probability %: 90
+Recovery Time (Mean): 12
+Mortality %: 1 
+CDC Threshold Infected %: 100
+Non-Compliance %: 100
+
+Milestones
+----------------------------------
+Average Outbreak Duration: 
+Peak Infected %: 
+Average Peak Infected %: 
+Peak Dead %: 
+Average Peak Dead %:
+
+==================================
+Slow Spread -- CDC Intervention
+==================================
+Parameters
+----------------------------------
+Density %: 40
+Initial Infected %: 1
+Infection Probability %: 20
+Recovery Time (Mean): 7
+Mortality %: 5
+CDC Threshold Infected %: 10
+Non-Compliance %: 5
+
+Milestones
+------------------------
+Average Outbreak Duration: 
+Peak Infected %: 
+Average Peak Infected %: 
+Peak Dead %: 
+Average Peak Dead %:
+
+==================================
+Slow Spread -- No CDC Intervention
+==================================
+Parameters
+----------------------------------
+Density %: 40
+Initial Infected %: 1
+Infection Probability %: 20
+Recovery Time (Mean): 7
+Mortality %: 5
+CDC Threshold Infected %: 100
+Non-Compliance %: 100
+
+Milestones
+------------------------
+Average Outbreak Duration: 
+Peak Infected %: 
+Average Peak Infected %: 
+Peak Dead %: 
+Average Peak Dead %:
