@@ -7,6 +7,9 @@ from datetime import datetime
 from simulation import GRID_SIZE, CELL_SIZE, STEP_DELAY, Simulation
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+# Frank stuff
+from data_logger import init_log, log_step, save_log  # Place at top of file
+
 
 class GridCanvas(tk.Canvas):
     """Draws agents on a GRID_SIZE×GRID_SIZE canvas."""
@@ -116,6 +119,7 @@ class App:
             rec_time, mort_rate,
             cdc_thresh, non_compl
         )
+        init_log()      # Initialize data logger
         self.total_agents = len(self.sim.agents)
         self.time_step = 0
         self.running = True
@@ -142,6 +146,8 @@ class App:
         self.canvas.draw()
         self.time_step += 1
         s, i, r, d = self.sim.counts()
+
+        log_step(self.time_step, s, i, r, d)        # Log step
 
         # percentages
         sp = s / self.total_agents * 100
@@ -244,3 +250,5 @@ class App:
         btn_frame.pack(pady=10)
         tk.Button(btn_frame, text="Export Graph", command=on_export).pack(side="left", padx=5)
         tk.Button(btn_frame, text="Close",        command=win.destroy).pack(side="left", padx=5)
+
+        save_log(scenario_label = "testRun")
