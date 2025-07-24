@@ -211,20 +211,27 @@ class App:
         win.title("Simulation Complete")
         win.grab_set()
 
-        tk.Label(win, text="The epidemic has ended.", font=("Arial",14)).pack(pady=(10,5))
+        tk.Label(win, text="The epidemic has ended.", font=("Arial", 14)).pack(pady=(10, 5))
         info = [
             f"Total steps: {self.time_step}",
-            f"Susceptible: {s/self.total_agents*100:.1f}%",
-            f"Infected: {i/self.total_agents*100:.1f}%",
-            f"Recovered: {r/self.total_agents*100:.1f}%",
-            f"Dead: {d/self.total_agents*100:.1f}%"
+            f"Susceptible: {s / self.total_agents * 100:.1f}%",
+            f"Infected: {i / self.total_agents * 100:.1f}%",
+            f"Recovered: {r / self.total_agents * 100:.1f}%",
+            f"Dead: {d / self.total_agents * 100:.1f}%"
         ]
         for line in info:
             tk.Label(win, text=line, anchor="w").pack(fill="x", padx=20)
 
         tk.Label(win, text="").pack()
-        msg = "Congratulations\nThe population survived!" if (s+r)>0 else "The population did not survive."
-        tk.Label(win, text=msg, font=("Arial",12)).pack(pady=(0,10))
+
+        # Threshold-based outcome:
+        alive_pct = (s + r) / self.total_agents * 100
+        if alive_pct > 50:
+            msg = "Population survived."
+        else:
+            msg = "Population did not survive."
+        msg = msg + "\n 'Threshold for survival is 50%'"
+        tk.Label(win, text=msg, font=("Arial", 12)).pack(pady=(0, 10))
 
         # Export Graph button
         def on_export():
@@ -243,4 +250,4 @@ class App:
         btn_frame = tk.Frame(win)
         btn_frame.pack(pady=10)
         tk.Button(btn_frame, text="Export Graph", command=on_export).pack(side="left", padx=5)
-        tk.Button(btn_frame, text="Close",        command=win.destroy).pack(side="left", padx=5)
+        tk.Button(btn_frame, text="Close", command=win.destroy).pack(side="left", padx=5)
