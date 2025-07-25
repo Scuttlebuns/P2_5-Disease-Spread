@@ -3,7 +3,7 @@ Balanced Spread -- CDC Intervention
 ==================================
 Parameters
 ----------------------------------
-Density %: 60
+Density %: 60 (1500 people)
 Initial Infected %: 2
 Infection Probability %: 50
 Recovery Time (Mean): 10
@@ -13,18 +13,18 @@ Non-Compliance %: 15
 
 Milestones
 ----------------------------------
-Average Outbreak Duration: 
-Peak Infected %: 
-Average Peak Infected %: 
-Peak Dead %: 
-Average Peak Dead %:
+Average Outbreak Duration: 28.7
+Peak Infected %: 1286/1500 = 85.73%
+Average Peak Infected %: 1257/1500 = 83.8%
+Peak Dead %: 41/1500 = 2.73%
+Average Peak Dead %: 32.6/1500 = 2.17%
 
 ==================================
 Balanced Spread -- No CDC Intervention
 ==================================
 Parameters
 ----------------------------------
-Density %: 60
+Density %: 60 (1500 people)
 Initial Infected %: 2
 Infection Probability %: 50
 Recovery Time (Mean): 10
@@ -34,18 +34,18 @@ Non-Compliance %: 100
 
 Milestones
 ----------------------------------
-Average Outbreak Duration: 
-Peak Infected %: 
-Average Peak Infected %: 
-Peak Dead %: 
-Average Peak Dead %:
+Average Outbreak Duration: 27.2
+Peak Infected %: 1340/1500 = 89.33%
+Average Peak Infected %: 1312.1/1500 = 87.47%
+Peak Dead %: 40/1500 = 2.67%
+Average Peak Dead %: 31.2/1500 = 2.08%
 
 ==================================
 Rapid Outbreak -- CDC Intervention
 ==================================
 Parameters
 ----------------------------------
-Density %: 80
+Density %: 80 (2000 people)
 Initial Infected %: 3
 Infection Probability %: 90
 Recovery Time (Mean): 12
@@ -55,18 +55,18 @@ Non-Compliance %: 80
 
 Milestones
 ----------------------------------
-Average Outbreak Duration: 
-Peak Infected %: 
-Average Peak Infected %: 
-Peak Dead %: 
-Average Peak Dead %:
+Average Outbreak Duration: 22.7
+Peak Infected %: 1990/2000 = 99.5%
+Average Peak Infected %: 1985.6/2000 = 99.23%
+Peak Dead %: 28/2000 = 1.4%
+Average Peak Dead %: 20.0/2000 = 1.0%
 
 ==================================
 Rapid Outbreak -- No CDC Intervention
 ==================================
 Parameters
 ----------------------------------
-Density %: 80
+Density %: 80 (2000 people)
 Initial Infected %: 3
 Infection Probability %: 90
 Recovery Time (Mean): 12
@@ -76,18 +76,18 @@ Non-Compliance %: 100
 
 Milestones
 ----------------------------------
-Average Outbreak Duration: 
-Peak Infected %: 
-Average Peak Infected %: 
-Peak Dead %: 
-Average Peak Dead %:
+Average Outbreak Duration: 23.4
+Peak Infected %: 1996/2000 = 99.8%
+Average Peak Infected %: 1986.5/2000 = 99.33%
+Peak Dead %: 26/2000 = 1.3%
+Average Peak Dead %: 20.9/2000 = 1.05%
 
 ==================================
 Slow Spread -- CDC Intervention
 ==================================
 Parameters
 ----------------------------------
-Density %: 40
+Density %: 40 (1000 people)
 Initial Infected %: 1
 Infection Probability %: 20
 Recovery Time (Mean): 7
@@ -97,18 +97,18 @@ Non-Compliance %: 5
 
 Milestones
 ------------------------
-Average Outbreak Duration: 
-Peak Infected %: 
-Average Peak Infected %: 
-Peak Dead %: 
-Average Peak Dead %:
+Average Outbreak Duration: 64.9
+Peak Infected %: 123/1000 =
+Average Peak Infected %: 109.3/1000 = 
+Peak Dead %: 33/1000 =
+Average Peak Dead %: 20.4/1000 =
 
 ==================================
 Slow Spread -- No CDC Intervention
 ==================================
 Parameters
 ----------------------------------
-Density %: 40
+Density %: 40 (1000 people)
 Initial Infected %: 1
 Infection Probability %: 20
 Recovery Time (Mean): 7
@@ -118,8 +118,8 @@ Non-Compliance %: 100
 
 Milestones
 ------------------------
-Average Outbreak Duration: 
-Peak Infected %: 
-Average Peak Infected %: 
-Peak Dead %: 
-Average Peak Dead %:
+Average Outbreak Duration: 71.5
+Peak Infected %: 224/1000 = 22.4%
+Average Peak Infected %: 175.0/1000 = 17.5%
+Peak Dead %: 50/1000 = 5.0%
+Average Peak Dead %: 41.3/1000 = 4.13%
