@@ -237,4 +237,4 @@ class App:
         tk.Button(btn_frame, text="Export Graph", command=on_export).pack(side="left", padx=5)
         tk.Button(btn_frame, text="Close", command=win.destroy).pack(side="left", padx=5)
 
-        save_log(scenario_label = "Slow_Spread_100")        # Saves log file, change title per scenario
+        save_log(scenario_label = "Rapid_Spread_10")        # Saves log file, change title per scenario
