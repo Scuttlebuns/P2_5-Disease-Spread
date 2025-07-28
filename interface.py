@@ -111,7 +111,7 @@ class App:
         non_compl      = max(0, min(1, self.non_compliance_var.get()/100))
 
         self.sim = Simulation(density, init_inf, inf_prob, rec_time, mort_rate, cdc_thresh, non_compl)
-        init_log()      # Initialize data logger
+        #init_log()      # Initialize data logger
         self.total_agents = len(self.sim.agents)
         self.time_step = 0
         self.running = True
@@ -138,7 +138,7 @@ class App:
         self.time_step += 1
         s, i, r, d = self.sim.counts()
 
-        log_step(self.time_step, s, i, r, d)        # Log step
+        #log_step(self.time_step, s, i, r, d)        # Log step
 
         # record chart data
         sp = s / self.total_agents * 100
@@ -237,4 +237,4 @@ class App:
         tk.Button(btn_frame, text="Export Graph", command=on_export).pack(side="left", padx=5)
         tk.Button(btn_frame, text="Close", command=win.destroy).pack(side="left", padx=5)
 
-        save_log(scenario_label = "Rapid_Spread_10")        # Saves log file, change title per scenario
+        #save_log(scenario_label = "Rapid_Spread_100")        # Saves log file, change title per scenario
