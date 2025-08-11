@@ -1,20 +1,22 @@
-# Project 2  
-## Disease Spread and Social Behavior
+# Disease Spread and Social Behavior Simulation
 
-### Objective
-Use a grid-based agent simulation to model the spread of an infectious disease through a population. Evaluate how factors such as immunity, behavior, mortality, and public health guidelines affect the outcome of an outbreak. Simulate scenarios with varying compliance and analyze their effects on infection peaks, fatality rates, and long-term immunity.
+## Overview
+This project uses a grid-based agent simulation to model the spread of an infectious disease through a population. It explores how factors such as immunity, behavior, mortality, and public health guidelines can influence the course of an outbreak. The simulation allows experimentation with varying compliance levels and analyzes their effects on infection peaks, fatality rates, and long-term immunity.
 
-### Background
-Infectious diseases spread through interactions between individuals, and outcomes depend heavily on a mix of biological and social factors. Modeling disease spread helps public health officials make decisions about distancing guidelines, vaccination policies, and lockdowns.
+## Background
+Infectious diseases spread through interactions between individuals, and outcomes depend on a mix of biological and social factors. Modeling disease spread can provide valuable insights into how distancing guidelines, vaccination, and behavioral differences shape an epidemic.
 
-In this project, you will simulate a population distributed on a 2D grid. Individuals move, interact, and transmit disease based on proximity and behavior rules. You will analyze the effects of compliance with CDC recommendations, natural immunity, and mortality risk on the spread and severity of an outbreak.
+This simulation models a population distributed on a 2D grid where individuals move, interact, and transmit disease based on proximity and behavior rules. It includes variables for compliance with health recommendations, natural immunity, and mortality risk.
 
-This project includes:
+Key features:
 - Dynamic population movement on a grid
 - Infection, recovery, and death modeling
 - Social behavior simulation (distancing and disobedience)
 - Variable immunity modeled with probability distributions
 - Scenario experimentation and epidemic analysis
+
+---
+
 
 ### Installation Steps
 1. **Create and activate a virtual environment:**
@@ -37,15 +39,10 @@ pip install -r requirements.txt
 python3 main.py
 ```
 
-
-
-### 85 / 15 Rule
-Following the instructions laid out here is 85% of the assignment. You must add something significant to the project. In other words, if you did everything in these instructions perfectly but nothing else, the highest grade you can receive for the project is 85%.
-
 ---
 
 ### Simulation Rules
-- **Grid Size:** 50×50 or larger  
+- **Grid Size:** 50×50  
 - **Initial Infected Individuals:** Randomly selected small percentage (e.g., 1–3%)  
 - **States:** Susceptible, Infected, Recovered (immune), Dead
 
@@ -70,7 +67,7 @@ Each individual follows these rules:
 ---
 
 ### Implementation
-Build a discrete-time simulation with individuals as agents on a 2D grid.  
+A discrete-time simulation with individuals as agents on a 2D grid.  
 Each agent has properties:
 - Position
 - Infection status
@@ -86,19 +83,13 @@ At each time step:
 ---
 
 ### Base Case Analysis
-Run a simulation with the following base scenario:
+Some of the scenarios ran:
 - **Grid:** 50×50  
 - **Population density:** 60%  
 - **Initial infection rate:** 2%  
 - **Mortality rate:** 2%  
 - **Recovery time:** 10 time steps  
 - **15% non-compliance with distancing**
-
-Answer the following:
-- What was the peak number of infected individuals?
-- What percentage of the population died?
-- How long did the outbreak last?
-- What was the average immunity level post-outbreak?
 
 ---
 
@@ -107,32 +98,14 @@ Answer the following:
 - Increase non-compliance to 25%  
 - Increase non-compliance to 40%
 
-Compare outbreak intensity and fatality to base case.  
-Analyze: Does reduced distancing lead to significantly higher infection rates or deaths?
 
 #### B. Immunity Variability
 - Change post-recovery immunity distribution to N(0.5, 0.2)  
 - Fixed 100% immunity
 
-Analyze: How does immunity level affect the chance of a second outbreak?
-
 ---
 
 ### Reporting
-Your final report should include:
-- Assumptions made (movement logic, infection model, etc.)
-- Simulation code
-- Plots showing infection, recovery, and death counts over time
-- Grid snapshots or animations of disease spread
-- A written report (2–3 pages) discussing:
-  - Model behavior
-  - Parameter effects
-  - Policy implications
+A Final Report was created analyzing our results
 
 ---
-
-### Submission Requirements
-- Python/Java/other simulation code
-- Screenshots or video (optional but encouraged)
-- Written report (2–3 pages)
-- Oral presentation (7 minutes + 3 minutes Q&A)
